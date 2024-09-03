@@ -10,8 +10,8 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url = postgresql://postgres.yakeoweyazctlbtjtoba:VkyOC8dGgI1KHT8Y@aws-0-ap-south-1.pooler.supabase.com:6543/postgres?pgbouncer=true&connection_limit=1
-  directUrl = postgresql://postgres.yakeoweyazctlbtjtoba:VkyOC8dGgI1KHT8Y@aws-0-ap-south-1.pooler.supabase.com:5432/postgres
+  url  = "postgresql://postgres.yakeoweyazctlbtjtoba:VkyOC8dGgI1KHT8Y@aws-0-ap-south-1.pooler.supabase.com:6543/postgres?pgbouncer=true&connection_limit=1"
+  directUrl   = "postgresql://postgres.yakeoweyazctlbtjtoba:VkyOC8dGgI1KHT8Y@aws-0-ap-south-1.pooler.supabase.com:5432/postgres"
 }
 
 model LoadPlan {
@@ -21,7 +21,7 @@ model LoadPlan {
   length      Int      
   width       Int      
   height      Int      
-  weight      Float    
+  weight      Int    
   quantity    Int      
   stackable   Boolean  
   tiltable    Boolean

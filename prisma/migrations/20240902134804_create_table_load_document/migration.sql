@@ -6,7 +6,7 @@ CREATE TABLE "LoadPlan" (
     "length" INTEGER NOT NULL,
     "width" INTEGER NOT NULL,
     "height" INTEGER NOT NULL,
-    "weight" DOUBLE PRECISION NOT NULL,
+    "weight" INTEGER NOT NULL,
     "quantity" INTEGER NOT NULL,
     "stackable" BOOLEAN NOT NULL,
     "tiltable" BOOLEAN NOT NULL,
