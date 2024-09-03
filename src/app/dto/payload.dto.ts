@@ -1,17 +1,17 @@
 import { IsArray, ValidateNested, IsInt } from 'class-validator';
 import { Type } from 'class-transformer';
-import { LoadDto } from './load.dto';
+import { CreateLoadDto, UpdateLoadDto } from './load.dto';
 
 export class PayloadDto {
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => LoadDto)
-  createLoadDocument: LoadDto[];
+  @Type(() => CreateLoadDto)
+  createLoadDocument: CreateLoadDto[];
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => LoadDto)
-  updateLoadDocument: LoadDto[];
+  @Type(() => UpdateLoadDto)
+  updateLoadDocument: UpdateLoadDto[];
 
   @IsArray()
   @IsInt({ each: true })
