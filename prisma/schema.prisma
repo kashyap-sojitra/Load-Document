@@ -1,0 +1,30 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = postgresql://postgres.yakeoweyazctlbtjtoba:VkyOC8dGgI1KHT8Y@aws-0-ap-south-1.pooler.supabase.com:6543/postgres?pgbouncer=true&connection_limit=1
+  directUrl = postgresql://postgres.yakeoweyazctlbtjtoba:VkyOC8dGgI1KHT8Y@aws-0-ap-south-1.pooler.supabase.com:5432/postgres
+}
+
+model LoadPlan {
+  id          Int      @id @default(autoincrement())
+  color       String   
+  name        String   
+  length      Int      
+  width       Int      
+  height      Int      
+  weight      Float    
+  quantity    Int      
+  stackable   Boolean  
+  tiltable    Boolean
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
